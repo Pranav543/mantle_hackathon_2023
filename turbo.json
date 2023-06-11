@@ -1,0 +1,21 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**"]
+    },
+    "web#build": {
+      "env": ["NODE_ENV", "NEXT_PUBLIC_RPC_MANTLE_TESTNET", "NEXT_PUBLIC_MANTLE_TESTNET_EXPLORER", "NEXT_PUBLIC_RPC_URL_GOERLI"]
+    },
+    "protocol#build": {
+      "env": ["RPC_MANTLE_TESTNET", "PRIVATE_KEYS_TEST"]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false
+    }
+  }
+}

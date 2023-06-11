@@ -9,14 +9,12 @@ const wallet = new Wallet(privateKeys[0], provider);
 const maxDepositAmt = utils.parseEther('10');
 
 const treeHeight = 20;
-const bitAddress = '0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000';
+const bitAddress = '0xdEAddEaDdeadDEadDEADDEAddEADDEAddead1111';
 const hasherAddress = '0x6e71b436C416ea169A0efB50Af5bB805b2Ca64ef';
 const proposalVerifierAddress = '0xB2A663e9d48D2f963e6035E8DAffaE94D2b03bDA';
 const withdrawVerifierAddress = '0xCfd4Ed36A7455E8aEC65F2d8bf56342126362Fe3';
 const revokeVerifierAddress = '0x6262ACD0E5bBb503ac7c4B574276FC0a4F3E848d';
 const registrarAddress = '0xf68dbFa5da95e7cd77a4693C71ff87EB7F1F2f74';
-// const tsunamiAddress = '0x2369FEc114A6FC10072C5fF717B1D95CFCeD6FE9'; // wETH withdraws
-// const tsunamiAddress = '0xbfCA28089Fbe5Ea7F6Fce568c6631149DD11935C'; // ETH withdraws
 
 export async function deployContract(contractName: string, ...args: any[]) {
   const Factory = await ethers.getContractFactory(contractName);
@@ -58,4 +56,4 @@ main().catch((error) => {
   process.exitCode = 1;
 });
 
-// 0x2369FEc114A6FC10072C5fF717B1D95CFCeD6FE9 --> deployed contract
+// 0x7B5D4B88B5548D9d3d32E0216eF47C7aE54edc27 --> deployed contract
