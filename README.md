@@ -4,6 +4,9 @@ _Monorepo for Tsunami protocol._
 
 Tsunami is a private token streaming protocol for streaming tokens on per-second basis privately.
 
+## Demo Video Link(Updated): https://youtu.be/ogU1QJqQQoY
+Note to judges: Please use this link to check the demo as I accidently submitted wrong link in the submission form.
+
 Tsunami Contracts:
 
 - Mantle Testnet 
