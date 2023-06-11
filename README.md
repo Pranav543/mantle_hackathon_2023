@@ -35,7 +35,7 @@ Tsunami stores encrypted stream UTXO notes as emitted events which can be decryp
 ![Screenshot 2023-06-11 at 2 23 14 PM](https://github.com/Pranav543/mantle_hackathon_2023/assets/64905367/239f2031-e437-4310-951b-44c21a2f669f)
 
 ## Withdrawing From a Private Stream
-![Screenshot 2023-06-11 at 1 59 27 PM](https://github.com/Pranav543/mantle_hackathon_2023/assets/64905367/befda5d3-45e6-46f3-af7d-00b68233dcb6)
+![Screenshot 2023-06-11 at 2 00 10 PM](https://github.com/Pranav543/mantle_hackathon_2023/assets/64905367/be7af73f-2be3-4b63-8ccf-55d9bdede2f2)
 
 ## Revoking a Private Stream
 ![Screenshot 2023-06-11 at 2 07 23 PM](https://github.com/Pranav543/mantle_hackathon_2023/assets/64905367/b49c740f-214d-4d0a-84d5-a4c466e665bd)
