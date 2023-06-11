@@ -31,15 +31,27 @@ Tsunami can be used by parties like individuals or DAOs to fund teams or project
 
 Tsunami stores encrypted stream UTXO notes as emitted events which can be decrypted by a shared secret key computed from any of the party's (sender/receiver) shielded private key & other party's (sender/receiver) shielded address/public key.
 
+## What Problems Tsunami Protocol Solves
+Token streaming on a per-second basis, such as for payroll or grants, has already gained traction and demonstrated its usefulness. For instance, let's consider a DAO funding a project while gradually releasing the promised grant amount over time as a stream. By utilizing a stream, the DAO can halt the flow of funds if there are any instances of misuse. However, due to increasing concerns about privacy on public blockchains and unfriendly regulations, not every DAO may be inclined to publicly stream funds to a project. Some DAOs may have reservations about the funded team, even if the team is working on a public good. However, this doesn't imply that the DAO or any other party is unwilling to provide funding.
+
+Tsunami enables DAOs or any other entities to initiate a private stream to another party. In addition to anonymizing both the sender and receiver, Tsunami ensures that stream parameters, such as the stream rate and start/stop times, remain confidential between the sender and receiver. Preserving the privacy of the sender DAO and the recipient team allows for the flourishing of innovations, particularly in the realm of privacy technology, without constant concerns about disruptive implications that could impede progress.
+
+## Challenges
+Some major hurdles were:
+
+1. Coming up with a logic/design that preserves privacy with token streaming as there's nothing like it yet currently. We came up with a approach which we call - Stream as a UTXO - where each stream is a UTXO in a Merkle tree. Only two parties - sender or receiver - can spend this UTXO to create a new one. But each party is restricted to what they can change in newly created UTXO (e.g. receiver can change checkpoint time of last withdraw).
+2. zkSNARK tooling is not very mature yet - so debugging errors related to Circom circuits are hard. It required some manual debugging to dig into spot where errors originated in the circuit.
+3. Unlike other UTXO based apps - a stream UTXO should be able to spent by two parties - either Sender or Receiver. So to decrypt the encrypted notes (UTXOs) a shared secret key is calculated with one party's shielded private key & other's shielded address or public key. So that both parties can decrypt the encrypted note & use it to spend it conveniently.
+
 ## Creating a Private Stream:
-![Screenshot 2023-06-11 at 2 23 14 PM](https://github.com/Pranav543/mantle_hackathon_2023/assets/64905367/239f2031-e437-4310-951b-44c21a2f669f)
+![Screenshot 2023-06-11 at 2 23 14 PM](https://github.com/Pranav543/mantle_hackathon_2023/assets/64905367/4ccf5502-62d8-4ffc-a1d5-8deaa56a2d4c)
+
 
 ## Withdrawing From a Private Stream
-![Screenshot 2023-06-11 at 2 00 10 PM](https://github.com/Pranav543/mantle_hackathon_2023/assets/64905367/be7af73f-2be3-4b63-8ccf-55d9bdede2f2)
+![Screenshot 2023-06-11 at 2 23 14 PM](https://github.com/Pranav543/mantle_hackathon_2023/assets/64905367/d920f9fd-9275-4197-91cf-95e2d0e285b4)
 
 ## Revoking a Private Stream
-![Screenshot 2023-06-11 at 2 07 23 PM](https://github.com/Pranav543/mantle_hackathon_2023/assets/64905367/b49c740f-214d-4d0a-84d5-a4c466e665bd)
-
+![Screenshot 2023-06-11 at 2 07 23 PM](https://github.com/Pranav543/mantle_hackathon_2023/assets/64905367/b525daa8-7ce2-4641-9a6f-b6d7e4014918)
 
 ## Installation
 
